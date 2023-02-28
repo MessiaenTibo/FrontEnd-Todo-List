@@ -1,5 +1,7 @@
 import { Plus } from "lucide-react";
 
+import '../assets/styles/components/todo.scss'
+
 export default () => {
   return (
     <form>

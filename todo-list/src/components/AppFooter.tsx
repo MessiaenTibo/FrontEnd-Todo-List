@@ -1,3 +1,5 @@
+import '../assets/styles/components/footer.scss'
+
 export default () => {
   return (
     <footer>
