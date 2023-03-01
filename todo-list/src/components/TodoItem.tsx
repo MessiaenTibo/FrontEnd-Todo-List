@@ -7,7 +7,8 @@ export default ( { todo }: { todo: ITodo}) => {
     
   return(
     <li className='c-todo-item'>
-        <input type="checkbox" checked={todo.isDone} id={todo.name}/>
+        {/* <input type="checkbox" checked={todo.isDone} id={todo.name}/> */}
+        <input type="checkbox" id={todo.name}/>
         <label>{todo.name}</label>
         <p>{todo.category}</p>
     </li>
