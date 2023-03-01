@@ -10,7 +10,9 @@ function App() {
 
       <AddTodo />
 
-      <TodoItem />
+      <ul className="js-todo-list">
+        <TodoItem name="water drinken" category="Personal" isDone={false}/>
+      </ul>
 
       <AppFooter />
     </div>

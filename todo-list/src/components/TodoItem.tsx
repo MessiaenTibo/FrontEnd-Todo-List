@@ -1,13 +1,17 @@
 import '../assets/styles/components/todoItem.scss'
 
-export default () => {
+export default ( {name, category, isDone}:
+  {name:string
+  category:string
+  isDone:boolean}) => {
     //TODO: I want props here
-    // description, category, isDone, id
+    // name, category, isDone, id
     
   return(
-    <li>
+    <li className='c-todo-item'>
         <input type="checkbox" />
-        <p>Todo: vissen water geven</p>
+        <label>{name}</label>
+        <p>{category}</p>
     </li>
 
   )
