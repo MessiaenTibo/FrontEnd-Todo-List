@@ -1,17 +1,15 @@
 import '../assets/styles/components/todoItem.scss'
+import { ITodo } from '../interfaces/ITodo'
 
-export default ( {name, category, isDone}:
-  {name:string
-  category:string
-  isDone:boolean}) => {
+export default ( { todo }: { todo: ITodo}) => {
     //TODO: I want props here
     // name, category, isDone, id
     
   return(
     <li className='c-todo-item'>
-        <input type="checkbox" />
-        <label>{name}</label>
-        <p>{category}</p>
+        <input type="checkbox" checked={todo.isDone} id={todo.name}/>
+        <label>{todo.name}</label>
+        <p>{todo.category}</p>
     </li>
 
   )
