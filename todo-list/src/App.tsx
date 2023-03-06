@@ -6,6 +6,7 @@ import AddTodo from "./components/AddTodo";
 import AppFooter from "./components/AppFooter";
 import AppHeader from "./components/AppHeader";
 import TodoItem from "./components/TodoItem";
+import Dashboard from "./routes/Dashboard";
 
 
 
@@ -22,19 +23,7 @@ function App() {
 
   return (
     <div className="o-container">
-      <AppHeader />
-
-      <AddTodo 
-        handleNewTodo={addNewTodo} 
-      />
-
-      <ul>
-        {todos.map((todo: ITodo) => (
-          <TodoItem
-          todo={todo} key={todo.name}
-        />
-        ))}
-      </ul>
+      <Dashboard/>
 
       <AppFooter />
     </div>
