@@ -25,7 +25,8 @@ export default () => {
 
             <ul>
                 {todos.map((todo: ITodo) => (
-                <TodoItem todo={todo} key={todo.name} />
+                    // <TodoItem todo={todo} key={todo.name} />
+                    <TodoItem key={todo.id} {...todo} />
                 ))}
             </ul>
         </main>
