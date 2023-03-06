@@ -1,11 +1,10 @@
 import { useState } from "react"
 
-import { ITodo } from "../interfaces/ITodo"
-
 import { Link } from "react-router-dom"
 import AddTodo from "../components/AddTodo"
 import AppHeader from "../components/AppHeader"
 import TodoItem from "../components/TodoItem"
+import { ITodo } from "../interfaces/ITodo"
 
 export default () => {
     const [todos, setTodos] = useState<ITodo[]>([
@@ -24,8 +23,10 @@ export default () => {
 
             <AddTodo handleNewTodo={addNewTodo}/>
 
-            <ul className="js-todo-list">
-            <TodoItem name="water drinken" category="Personal" isDone={false}/>
+            <ul>
+                {todos.map((todo: ITodo) => (
+                <TodoItem todo={todo} key={todo.name} />
+                ))}
             </ul>
         </main>
     )
