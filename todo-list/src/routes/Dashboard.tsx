@@ -23,10 +23,9 @@ export default () => {
 
             <AddTodo handleNewTodo={addNewTodo}/>
 
-            <ul>
+            <ul className="flex flex-col gap-y-4">
                 {todos.map((todo: ITodo) => (
-                    // <TodoItem todo={todo} key={todo.name} />
-                    <TodoItem key={todo.id} {...todo} />
+                    <TodoItem todo={todo} key={todo.name} />
                 ))}
             </ul>
         </main>

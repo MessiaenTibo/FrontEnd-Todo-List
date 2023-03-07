@@ -30,8 +30,8 @@ export default ({ handleNewTodo}:{handleNewTodo: Function}) => {
   };
 
   return (
-    <form onSubmit={addTodo} className="mb-8 flex items-center mb-8 gap-8">
-      <button className="shrink-0 w-16 h-16 hover:bg-neutral-200 flex items-center justify-center rounded-full focus:outline-none focus-visible:ring-2">
+    <form onSubmit={addTodo} className="mb-8 flex items-center mb-8 gap-4">
+      <button className="shrink-0 w-12 h-12 hover:bg-neutral-200 flex items-center justify-center rounded-full focus:outline-none focus-visible:ring-2">
         <Plus className="stroke-current text-blue-600" />
       </button>
 

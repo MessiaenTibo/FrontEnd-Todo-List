@@ -1,10 +1,12 @@
+import { Settings } from 'lucide-react';
 import { useState } from 'react'
+import { Link } from 'react-router-dom';
 
 import '../assets/styles/components/header.scss'
 
 export default () => {
     const [user, setUser] = useState('Marty')
-    const [todoCount, setTodoCount] = useState(14)
+    const [todoCount, setTodoCount] = useState(3)
 
     const printAmountTodos = () => {
         if (todoCount === 0) {
@@ -20,9 +22,14 @@ export default () => {
         
 
   return (
-    <header className="py-12">
-      <h1 className='text-xl font-semibold'>Hello, {user}</h1>
-      <p className='text-lg text-neutral-500'>{printAmountTodos()}</p>
+    <header className="flex items-center justify-between py-12">
+      <div>
+        <h1 className='text-xl font-semibold'>Hello, {user}</h1>
+        <p className='text-lg text-neutral-500'>{printAmountTodos()}</p>
+      </div>
+      <Link className='rounded-full bg-neutral-100 p-4 text-neutral-300 hover:text-neutral-600 focus:outline-none
+      focus-visible:ring focus-visible:text-neutral-600'
+      to={'/settings'}><Settings /></Link>
     </header>
   );
 };
