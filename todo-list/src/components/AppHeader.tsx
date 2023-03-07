@@ -20,9 +20,9 @@ export default () => {
         
 
   return (
-    <header className="c-header">
-      <h1 className='c-header__title'>Hello, {user}</h1>
-      <p className='c-header__subtitle'>{printAmountTodos()}</p>
+    <header className="py-12">
+      <h1 className='text-xl font-semibold'>Hello, {user}</h1>
+      <p className='text-lg text-neutral-500'>{printAmountTodos()}</p>
     </header>
   );
 };

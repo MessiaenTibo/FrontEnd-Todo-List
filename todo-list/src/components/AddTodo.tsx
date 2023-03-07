@@ -30,22 +30,22 @@ export default ({ handleNewTodo}:{handleNewTodo: Function}) => {
   };
 
   return (
-    <form onSubmit={addTodo} className="c-add-todo">
-      <button className="c-add-todo__button js-add-todo__button">
-        <Plus className="c-add-todo__icon" />
+    <form onSubmit={addTodo} className="mb-8 flex items-center mb-8 gap-8">
+      <button className="shrink-0 w-16 h-16 hover:bg-neutral-200 flex items-center justify-center rounded-full focus:outline-none focus-visible:ring-2">
+        <Plus className="stroke-current text-blue-600" />
       </button>
 
-      <div>
+      <div className="space-y-2 w-full">
         <input
           value={newTodo.name}
           onInput={(e: React.FormEvent<HTMLInputElement>) => setNewTodo({ ...newTodo, name: e.currentTarget.value })}
-          className="c-add-todo__input"
+          className="appearance-none text-xl p-2 bg-none border-nautral-200 rounded w-full focus:outline-none focus-visible:ring-2"
           type="text"
           placeholder="Add a new todo" />
         <select
           value={newTodo.category}
           onChange={(e: React.FormEvent<HTMLSelectElement>) => setNewTodo({ ...newTodo, category: e.currentTarget.value })}
-          className="c-add-todo__select"
+          className="w-full p-2 border-nautral-200 rounded focus:outline-none focus-visible:ring-2"
           name="category" id="category">
           <option value="work">Work</option>
           <option value="personal">Personal</option>

@@ -1,5 +1,8 @@
 import '../assets/styles/components/todoItem.scss'
 
+//TODO: add custom checkboc! CSS only
+//TODO: add styling
+
 export default ( {name, category, isDone}:
   {name:string
   category:string
