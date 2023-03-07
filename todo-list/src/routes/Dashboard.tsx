@@ -18,7 +18,6 @@ export default () => {
       }
     return(
         <main>
-            <Link to="/settings">Settings</Link>
             <AppHeader />
 
             <AddTodo handleNewTodo={addNewTodo}/>
