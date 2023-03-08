@@ -1,11 +1,13 @@
 import { Plus } from "lucide-react";
 import { useState } from "react";
+import { uid } from "uid";
 
 import '../assets/styles/components/todo.scss'
 import { ITodo } from "../interfaces/ITodo";
 
 export default ({ handleNewTodo}:{handleNewTodo: Function}) => {
   const [newTodo, setNewTodo] = useState<ITodo>({
+    id: uid(8),
     name: '',
     category: 'Work',
     isDone: false
@@ -13,6 +15,7 @@ export default ({ handleNewTodo}:{handleNewTodo: Function}) => {
 
   const emptyTodo = () =>{
     setNewTodo({
+      id: uid(8),
       name: '',
       category: 'Work',
       isDone: false,
