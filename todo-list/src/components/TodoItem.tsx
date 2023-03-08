@@ -28,14 +28,15 @@ const [timeOutId, setTimeoutId] = useState<number | undefined>();
     
   return(
     <li>
-        <input className='sr-only peer' id={todo.id} type="checkbox" defaultChecked={todo.isDone}
-        onChange={handleToggle}/>
+        <label className={`flex items-center transition-opacity duration-200 gap-4 peer-checked:opacity-30 ${todo.isDone ? 'opacity-40' : ''}`} htmlFor={todo.id}>
+          <input className='sr-only peer' id={todo.id} type="checkbox" defaultChecked={todo.isDone}
+          onChange={handleToggle}/>
 
-        <label className='flex items-center transition-opacity duration-200 gap-4 peer-checked:opacity-30' htmlFor={todo.id}>
-          <span className={`shrink-0 flex justify-center rounded-full items-center w-12 h-12 bg-neutral-100 border-2
+          <span className={`shrink-0 flex justify-center rounded-full items-center w-12 h-12 bg-neutral-100 border-2 peer-checked:bg-blue-600 peer-focus-visible:ring
           border-blue-600 ${todo.isDone ? 'bg-blue-500 text-white' : 'text-blue-600'}`}>
-            <Check className=" stroke-current "/>
+            <Check className=" stroke-current"/>
           </span>
+
 
           <div>
             <p className='text-xl- font-semibold'>{todo.name}</p>
