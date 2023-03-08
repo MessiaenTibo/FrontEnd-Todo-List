@@ -14,7 +14,7 @@ export default ( {todo}:{todo: ITodo}) => {
         <input className='sr-only peer' id={todo.name} type="checkbox" />
 
         <span className={`shrink-0 flex justify-center rounded-full items-center w-12 h-12 bg-neutral-100 border-2
-        border-blue-600 ${todo.isDone ? 'bg-blue-600 text-white' : 'text-blue-600'}`}>
+        border-blue-600 ${todo.isDone ? 'bg-blue-700 text-white' : 'text-blue-600'}`}>
           <Check className=" stroke-current "/>
         </span>
 
